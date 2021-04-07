@@ -19,6 +19,12 @@ class Cor : Serializable {
         this.codigo = codigo
     }
 
+    companion object {
+        fun toHex(color: Int): String {
+            return String.format("#%06X", (0xFFFFFF and color))
+        }
+    }
+
     fun toHex() : String {
         return String.format("#%06X", (0xFFFFFF and codigo))
     }
