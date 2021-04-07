@@ -9,8 +9,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.example.desafioandroid.R
+import com.example.desafioandroid.model.Cor
 
-class CorAdapter(var cadastro: Cadastro, var context: Context): BaseAdapter() {
+class CorAdapter(private var cadastro: Cadastro, private var context: Context): BaseAdapter() {
+    fun add(cor: Cor) {
+        this.cadastro.add(cor)
+    }
+
     override fun getCount(): Int {
         return this.cadastro.count()
     }
