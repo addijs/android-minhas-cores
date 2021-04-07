@@ -3,25 +3,37 @@ package com.example.desafioandroid.adapter
 import com.example.desafioandroid.model.Cor
 
 class Cadastro {
-    private lateinit var lista: ArrayList<Cor>
+  private lateinit var list: ArrayList<Cor>
 
-    init {
-        this.lista = arrayListOf()
-    }
+  init {
+    this.list = arrayListOf()
+  }
 
-    fun add(cor: Cor) {
-        this.lista.add(cor)
-    }
+  fun add(color: Cor) {
+    this.list.add(color)
+  }
 
-    fun get(): ArrayList<Cor> {
-        return this.lista
-    }
+  fun set(newList: ArrayList<Cor>) {
+    this.list = newList
+  }
 
-    fun get(index: Int): Cor {
-        return this.lista.get(index)
-    }
+  fun get(): ArrayList<Cor> {
+    return this.list
+  }
 
-    fun count(): Int {
-        return this.lista.count()
-    }
+  fun update(color: Cor, index: Int) {
+    this.list[index] = color
+  }
+
+  fun remove(index: Int) {
+    this.list.removeAt(index)
+  }
+
+  fun get(index: Int): Cor {
+    return this.list[index]
+  }
+
+  fun count(): Int {
+    return this.list.count()
+  }
 }
